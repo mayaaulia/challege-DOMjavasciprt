@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skilvul</title>
+
+    <style>
+      * {
+        border: 2px solid #dedede;
+        padding: 15px;
+        margin: 15px;
+      }
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 600px;
+        font-family: sans-serif;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Javascript Framework & Libraries</h1>
+    <p>
+      Javacript memiliki berbagai macam
+      <strong>Framework & Libraries</strong> yang dapat kita gunakan.
+    </p>
+    <h2>The Most Popular JavaScript Framework & Libraries</h2>
+    <ul> 
+      <li>React</li>
+      <li>Vue</li>
+      <li>Angular</li>
+    </ul>
+    <button id="text1" onclick="cekParent()">Cek Parent (nodeName)</button>
+    <p>Apa Parent dari "Javacript memiliki berbagai macam Framework & Libraries yang dapat kita gunakan" ?</p>
+    <p id="text2" ></p>
+    <p>Apa Parent dari "The Most Popular JavaScript Framework & Libraries" ?</p>
+    <p id="text3" ></p>
+    <p>Apa Parent dari "React" ?</p>
+    <p id="text4" ></p>
+    
+    <script>
+        function cekParent(){
+            const h2 = document.getElementsByTagName("h2")[0];
+            const p = document.getElementsByTagName("p")[0];
+            const li = document.getElementsByTagName("li")[0];
+            // menampilkan parent li contoh 1
+            document.getElementById('text4').innerHTML = li.parentElement.nodeName
+            // menampilkan parent h2 contoh 2
+            document.getElementById('text3').innerHTML = h2.parentElement.nodeName
+            // menampilkan parent p contoh 3
+            document.getElementById('text2').innerHTML = p.parentElement.nodeName
+            console.log ()
+        }
+    </script>
+  </body>
+</html>

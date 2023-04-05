@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skilvul</title>
+
+    <style>
+      * {
+        border: 2px solid #dedede;
+        padding: 15px;
+        margin: 15px;
+      }
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 600px;
+        font-family: sans-serif;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Javascript Framework & Libraries</h1>
+    <p>
+      Javacript memiliki berbagai macam
+      <strong>Framework & Libraries</strong> yang dapat kita gunakan.
+    </p>
+    <h2>The Most Popular JavaScript Framework & Libraries</h2>
+    <ul> List JavaScript Framework & Libraries
+      <li>React</li>
+      <li>Vue</li>
+      <li>Angular</li>
+    </ul>
+    <button id="text1" onclick="cekChildern()">Cek Sibling</button>
+    <p>Apa next sibling dari "Javascript Framework & Libraries" ?</p>
+    <p id="text2" ></p>
+    <p>Apa next sibling dari "Vue" ?</p>
+    <p id="text3" ></p>
+    <p>Apa previous sibling dari "Vue" ?</p>
+    <p id="text4" ></p>
+
+    <script>
+        function cekChildern(){
+            const h1 = document.getElementsByTagName("h1")[0];
+            const p = document.getElementsByTagName("p")[0];
+            const li = document.getElementsByTagName("li")[1];
+            // menampilkan child ul contoh 3
+            document.getElementById('text4').innerHTML = li.previousElementSibling.innerHTML
+            // menampilkan parent h2 contoh 2
+            document.getElementById('text3').innerHTML = li.nextElementSibling.innerHTML
+            // menampilkan next sibling body contoh 1
+            document.getElementById('text2').innerHTML = h1.nextElementSibling.innerHTML
+            console.log ()
+        }
+    </script>
+  </body>
+</html>

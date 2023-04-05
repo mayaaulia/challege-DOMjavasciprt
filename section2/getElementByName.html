@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <h1 style="color: red; text-align: center;">Skilvul</h1>
+
+    <form>
+      <div class="wrapper" style="text-align: center;">
+        Enter your name:
+        <input type="text" id="t1" name="text1"/>
+        <br /> <br />
+        Enter your email:
+        <input type="email" id="t2" name="text2"/>
+        <br /><br />
+        Enter your Age:
+        <input type="number" id="n1" name="number1">
+        <br /><br />
+        <input type="submit" style="position: absolute;" onclick="getText()" />
+      </div>
+    </form>
+
+    <script>
+      function getText() {
+        // mengakses element dengan name = text1 contoh 1
+        // console.log(document.getElementsByName("text1"))
+        let name = document.getElementsByName("text1")[0].value;
+        // console.log(name)
+        // mengakses element dengan name = text2 contoh 2
+        // console.log(document.getElementsByName("text2"))
+        let email = document.getElementsByName("text2")[0].value;
+        // console.log (email)
+        // mengakses element dengan name = number1 contoh 3
+        // console.log(document.getElementsByName("text2"))
+        let age = document.getElementsByName("number1")[0].value;
+        // console.log(age)
+        document.write(
+          "Hello " + name + " " + age + " " + email + ", teks ini di print menggunakan HTML DOM "
+        );
+
+      }
+    </script>
+  </body>
+</html>
