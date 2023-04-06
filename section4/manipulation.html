@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="new">
+      <p id="p1">Ruangguru CAMP</p>
+      <p id="p2">Career Acceleration Bootcamp</p>
+    </div>
+    <script>
+      // membuat elemen baru berupa elemen <p>
+      let tag = document.createElement("p");
+
+      // membuat teks baru untuk di sisipkan kedalam elemen yang baru dibuat
+      let text = document.createTextNode(
+        "Teks ini dibuat dengan manipulasi DOM"
+      );
+
+      // menempelkan teks baru kedalam elemen <p> baru
+      tag.appendChild(text);
+
+      // mendapatkan elemen <div> dengan class="new"
+      let element = document.getElementById("new");
+
+      // menempelkan elemen <p> baru kedalam <div> dengan class="new"
+      element.appendChild(tag);
+    </script>
+  </body>
+</html>
